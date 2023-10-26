@@ -5,10 +5,10 @@ const app = express();
 
 app.use(express.json());
 
-// Conectar ao MongoDB usando o Mongoose
+// Conectando ao mongoDB usando Mongoose
 mongoose.connect('mongodb://localhost/checklist', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Definir o modelo para a coleção 'task'
+// Definindo modelo para 'task'
 const Task = mongoose.model('task', {
   Nome: String,
   Idade: Number
